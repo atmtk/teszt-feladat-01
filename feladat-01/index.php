@@ -17,7 +17,7 @@ $tomb = array();
 // a végén ezzel irasd ki az eredményt
 var_dump($tomb);
 
-
+// innentől lefelé már ne módosítsd a filet, ez fogja kiírni, hogy jó-e a megoldásod
 $joEredmeny = array(
     'ubeu',
     'dubuaedv',
