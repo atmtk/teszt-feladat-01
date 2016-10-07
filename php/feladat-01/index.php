@@ -27,10 +27,11 @@ $joEredmeny = array(
     'bue',
 );
 
-if ($tomb == $joEredmeny)
+if ($joEredmeny == $tomb)
 {
     var_dump("Siker!");
 }
-else {
+else
+{
     var_dump("Valami még nem stimmel.");
 }
