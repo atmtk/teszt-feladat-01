@@ -10,7 +10,8 @@
  * A kapcsolat.csv filet nem módosíthatod, csak ezt a filet szerkeszd.
  */
 
-$csvLines = array();// ebbe töltsd be a kapcsolat.csv file sorait
+// ebbe töltsd be a kapcsolat.csv file sorait
+$csvLines = [];
 
 // innentől lefelé írd be a te kódodat
 
@@ -22,18 +23,15 @@ var_dump($csvLines);
 // innentől lefelé már ne módosítsd a filet, ez fogja kiírni, hogy jó-e a megoldásod (csak az első sort checkolja)
 
 // például az első sor így kellene, hogy kinézzen:
-$line0 = array(
+$line0 = [
     'term_id1'      => '18863',
     'term_id2'      => '50665',
     'tipus'         => 'Együtt felhasználásra ajánlott',
     'megjegyzes'    => 'Élzárás amelyet, rendelésre elkészítünk!',
-);
+];
 
-if ($line0 == $csvLines[0])
-{
-    var_dump("Siker! Az első sor biztos jó, reméljük, hogy a többi is. :)");
-}
-else
-{
-    var_dump("Valami még nem stimmel.");
-}
+var_dump(
+    $line0 === $csvLines[0] ?
+        'Siker! Az első sor biztos jó, reméljük, hogy a többi is. :)' :
+        'Valami még nem stimmel.'
+);
